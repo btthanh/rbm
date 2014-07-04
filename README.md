@@ -11,6 +11,7 @@ I used the code from:
 
 * [DeepLearnToolbox] (https://github.com/rasmusbergpalm/DeepLearnToolbox)
 * [Unsupervised Feature Learning and Deep Learning] (http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial)
+
 as the starting point for this project.
 
 Setup
