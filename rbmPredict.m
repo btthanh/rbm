@@ -6,8 +6,8 @@ hiddenSize = size(params.c, 1);
 
 g = gpuDevice;
 if g.FreeMemory >= 1 % GPU has high memory
-    batchSize = 100;
-	numbatches = m / batchSize;
+    batchSize  = 100;
+    numbatches = m / batchSize;
         
     p = zeros(m, 1);
     for l = 1 : numbatches

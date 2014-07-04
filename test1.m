@@ -4,18 +4,18 @@ clc;
 %%======================================================================
 %% Load MNIST database files
 
-X				= loadMNISTImages('mnist/train-images-idx3-ubyte')';
-Y				= loadMNISTLabels('mnist/train-labels-idx1-ubyte');
+X               = loadMNISTImages('mnist/train-images-idx3-ubyte')';
+Y               = loadMNISTLabels('mnist/train-labels-idx1-ubyte');
 
 data = struct;
-trainSize 		= 50000;
+trainSize       = 50000;
 data.train_x	= X(1:trainSize, :);
 data.train_y	= double(repmat(Y(1:trainSize), 1, 10) == repmat(0:9, trainSize, 1));
-data.val_x 		= X(trainSize + 1:end, :);
-data.val_y 		= Y(trainSize + 1:end);
+data.val_x      = X(trainSize + 1:end, :);
+data.val_y      = Y(trainSize + 1:end);
             
-test_x			= loadMNISTImages('mnist/t10k-images-idx3-ubyte')';
-test_y			= loadMNISTLabels('mnist/t10k-labels-idx1-ubyte');
+test_x          = loadMNISTImages('mnist/t10k-images-idx3-ubyte')';
+test_y          = loadMNISTLabels('mnist/t10k-labels-idx1-ubyte');
 
 %%======================================================================
 %% Initializing Parameters
@@ -23,7 +23,7 @@ test_y			= loadMNISTLabels('mnist/t10k-labels-idx1-ubyte');
 opts = struct;
 opts.hiddenSize	= 1500;
 opts.batchSize	= 1;
-opts.lambda		= 0.05;     % learning rate
+opts.lambda     = 0.05;     % learning rate
 opts.alpha      = 0.01;     % trade-off Discriminative RBM vs Generative RBM
 opts.delta      = 1e-4;     % hyper parameter for sparse HDRBM
 opts.patience	= 15;

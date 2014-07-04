@@ -10,12 +10,12 @@ for l = 1 : m
     y1          = data.train_y(kk(l), :);
     
     % RBM Generative
-    temp		= params.c + params.W * x1';
+    temp        = params.c + params.W * x1';
     [h1, ph1]	= sigmrnd(temp + params.U * y1');
-    x2			= sigmrnd(params.b' + h1' * params.W);
-    py2			= exp(gather(params.d' + h1' * params.U));
-    y2			= mnrnd(1, py2 / sum(py2));
-    ph2			= sigm(params.c + params.W * x2' + params.U * y2');
+    x2          = sigmrnd(params.b' + h1' * params.W);
+    py2         = exp(gather(params.d' + h1' * params.U));
+    y2          = mnrnd(1, py2 / sum(py2));
+    ph2         = sigm(params.c + params.W * x2' + params.U * y2');
     
     % RBM Discriminative
     pos         = sigm(temp + params.U * y1');

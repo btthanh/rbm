@@ -1,18 +1,9 @@
-Classification using Discriminative RBM
-=======================================
+RBMs with label variables
+=========================
 
-A Matlab toolbox for classification using Disciminative RBM.
+Matlab code for RBMs with label variables (see [this paper] (http://machinelearning.org/archive/icml2008/papers/601.pdf)).
 
-For a more informal introduction, see the following link by Hugo Larochelle.
-
-* [Classification using Discriminative RBM](http://machinelearning.org/archive/icml2008/papers/601.pdf) (2008)
-
-I used the code from:
-
-* [DeepLearnToolbox] (https://github.com/rasmusbergpalm/DeepLearnToolbox)
-* [Unsupervised Feature Learning and Deep Learning] (http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial)
-
-as the starting point for this project.
+I used the code from [DeepLearnToolbox] (https://github.com/rasmusbergpalm/DeepLearnToolbox) & [Stanford's UFLDL tutorial] (http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial) as the starting point for this project.
 
 Setup
 =====

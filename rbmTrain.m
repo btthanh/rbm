@@ -9,10 +9,10 @@ for l = 1 : m
     y1          = data.train_y(kk(l), :);
 
     [h1, ph1]	= sigmrnd(params.c + params.W * x1' + params.U * y1');
-    x2			= sigmrnd(params.b' + h1' * params.W);
-    py2			= exp(gather(params.d' + h1' * params.U));
-    y2			= mnrnd(1, py2 / sum(py2));
-    ph2			= sigm(params.c + params.W * x2' + params.U * y2');
+    x2          = sigmrnd(params.b' + h1' * params.W);
+    py2         = exp(gather(params.d' + h1' * params.U));
+    y2          = mnrnd(1, py2 / sum(py2));
+    ph2         = sigm(params.c + params.W * x2' + params.U * y2');
 
     params.W	= params.W + lambda * (ph1 * x1 - ph2 * x2);
     params.U	= params.U + lambda * (ph1 * y1 - ph2 * y2);

@@ -8,7 +8,7 @@ for l = 1 : m
     x1          = data.train_x(kk(l), :);
     y1          = data.train_y(kk(l), :);
     
-    temp		= params.c + params.W * x1';
+    temp        = params.c + params.W * x1';
     pos         = sigm(temp + params.U * y1');
     neg         = bsxfun(@plus, params.U, temp);
     prob        = exp(neg) + 1;
