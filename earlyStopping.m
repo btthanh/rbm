@@ -41,4 +41,5 @@ model.totalEpochs = totalEpochs - 1;
 model.epochTimes  = epochTimes / (totalEpochs - 1);
 model.allTimes    = toc(allTimes);
 model.opts        = opts;
+model.train       = train;
 end
